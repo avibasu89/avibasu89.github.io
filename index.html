@@ -9,6 +9,19 @@
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
+
+<script>
+  function changeImage() {
+    var image = document.getElementById('image1');
+    if (image.src.match("profile_pic")) {
+      image.src = "image\avi_hover_pic.jpg";
+    } else {
+      image.src = "image\avi_profile_pic.jpg";
+    }
+  }
+  </script>
+  
+
 <body class="w3-light-grey">
 
 <!-- Page Container -->
@@ -22,7 +35,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     
       <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-display-container">
-          <img src="image\avi_profile_pic.jpg" style="width:100%" alt="Avatar">
+          <img id = "image1" onmouseover="changeImage()" onmouseout="changeimage()" src= "image\avi_profile_pic.jpg" style="width:100%" alt="Avatar">
           <div class="w3-display-bottomleft w3-container w3-text-black">
             <h2>Avibasu Bandyopadhyay</h2>
           </div>
